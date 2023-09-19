@@ -1,0 +1,11 @@
+.h3{
+    font-weight: bolder;
+}
+
+.about .row{
+    margin: 10% 0;
+}
+
+.image img{
+    border-radius: 5%;
+}

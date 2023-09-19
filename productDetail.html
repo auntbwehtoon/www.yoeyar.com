@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ProductDetail</title>
+
+    <link rel="shortcut icon" href="img/logo1.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="productDetailStyle.css" />
+
+    <script src="https://kit.fontawesome.com/bde1038097.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-light navbar-expand-md">
+                        <a class="navbar-brand" href="home.html">
+                            <img src="img/logo1.png" alt="logo" width="100" height="80" />
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#mainMenu" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="mainMenu">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link" href="product.html">Product</a>
+                                </li>
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link" href="about.html">About</a>
+                                </li>
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link" href="contactus.html">Contact Us</a>
+                                </li>
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link" href="loginSignUp.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                                </li>
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link" href="loginSignUp.html"><i
+                                            class="fa-solid fa-arrow-right-to-bracket" name="Login"></i></a>
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search"
+                                    aria-label="Search" />
+                                <button class="btn btn-outline-dark" type="submit">
+                                    Search
+                                </button>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--section-->
+    <div class="flex-box">
+        <div class="left">
+            <div class="big-img">
+                <img src="https://render.fineartamerica.com/images/rendered/default/t-shirt/23/5/images/artworkimages/medium/3/sunset-on-bagans-temples-myanmar-lie-yim.jpg?targetx=-2&targety=-2&imagewidth=430&imageheight=284&modelwidth=430&modelheight=575">
+            </div>
+            <div class="images">
+                <div class="small-img">
+                    <img src="https://render.fineartamerica.com/images/rendered/default/t-shirt/23/5/images/artworkimages/medium/3/sunset-on-bagans-temples-myanmar-lie-yim.jpg?targetx=-2&targety=-2&imagewidth=430&imageheight=284&modelwidth=430&modelheight=575" onclick="showImg(this.src)">
+                </div>
+                <div class="small-img">
+                    <img src="https://render.fineartamerica.com/images/rendered/default/t-shirt/23/25/images/artworkimages/medium/3/sitting-buddha-bagan-myanmar-lie-yim.jpg?targetx=-2&targety=-2&imagewidth=430&imageheight=284&modelwidth=430&modelheight=575" onclick="showImg(this.src)">
+                </div>
+                <div class="small-img">
+                    <img src="https://images.squarespace-cdn.com/content/v1/60c96a5d6a81366f53e980a8/1644734106577-6LYI0VT2EZJ9X207WYV3/1.jpg" onclick="showImg(this.src)">
+                </div>
+                <div class="small-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRumNZeqe2xPZfoyOXZ5GzNCBuma0bBXvGc2-63vf5kOALzp-oLBTyRK9KsL1XJZoE9XgA&usqp=CAU" onclick="showImg(this.src)">
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="pname">Bagan T-Shirts for Men</div>
+            <div class="ratings">
+                <p>100% Corton, T-Shirt. Crafted from premium, breathable cotton, this versatile wardrobe staple</p>
+            </div>
+            <div class="price">$40</div>
+            <div class="size">
+                <p>Size :</p>
+                <div class="psize active">M</div>
+                <div class="psize">L</div>
+                <div class="psize">XL</div>
+            </div>
+            <div class="quantity">
+                <p>Quantity :</p>
+                <input type="number" min="1" max="5" value="1">
+            </div>
+
+            <div class="btn-box">
+                <a href="loginSignUp.html" onclick="alert('To add cart, you have to login firstly!!')"><button class="cart-btn">Add to Cart</button></a>
+                <a href="loginSignUp.html" onclick="alert('To buy item, you have to login firstly!!')"><button class="buy-btn">Buy Now</button></a>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let bigImg = document.querySelector('.big-img img');
+        function showImg(pic) {
+            bigImg.src = pic;
+        }
+    </script>
+
+
+    <!--footer-->
+
+    <div style="background-color: #222222; color: #fff">
+        <footer class="footer-10">
+            <div class="container">
+                <div class="row mb-5 pb-3 no-gutters">
+                    <div class="col-md-4 mb-md-0 mb-4 d-flex">
+                        <div class="con con-1 w-100 py-5">
+                            <div class="con-info w-100 text-center">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-phone iconGG mb-4 p-3"></i>
+                                </div>
+                                <div class="text">
+                                    <a href="callto: (+00) 1234 5678">(+00) 1234 5678</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-4 d-flex">
+                        <div class="con con-2 w-100 py-5">
+                            <div class="con-info w-100 text-center">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-envelope iconGG mb-4 p-3"></i>
+                                </div>
+                                <div class="text">
+                                    <a href="mailto: yoeyar.local@email.com">yoeyar.local@email.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-4 d-flex">
+                        <div class="con con-3 w-100 py-5">
+                            <div class="con-info w-100 text-center">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-location-dot iconGG mb-4 p-3"></i>
+                                </div>
+                                <div class="text">
+                                    <span>203 Fake St. Mountain View, San Francisco, California,
+                                        USA</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="row">
+                            <div class="col-md-4 mb-md-0 mb-4">
+                                <h2 class="footer-heading">About</h2>
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="d-block">Out story</a></li>
+                                    <li><a href="#" class="d-block">Awards</a></li>
+                                    <li><a href="#" class="d-block">Our Team</a></li>
+                                    <li><a href="#" class="d-block">Career</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 mb-md-0 mb-4">
+                                <h2 class="footer-heading">Company</h2>
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="d-block">Our services</a></li>
+                                    <li><a href="#" class="d-block">Clients</a></li>
+                                    <li><a href="#" class="d-block">Contact</a></li>
+                                    <li><a href="#" class="d-block">Press</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 mb-md-0 mb-4">
+                                <h2 class="footer-heading">Resources</h2>
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="d-block">Blog</a></li>
+                                    <li><a href="#" class="d-block">Newsletter</a></li>
+                                    <li><a href="#" class="d-block">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 mb-md-0 mb-4">
+                        <h2 class="footer-heading">Subscribe</h2>
+                        <form action="#" class="subscribe-form">
+                            <div class="form-group d-flex">
+                                <input type="text" class="form-control rounded-left"
+                                    placeholder="Enter email address" />
+                                <button type="submit"
+                                    class="btn btn-primary form-control submit rounded-right w-25 p-3">
+                                    Subscribe
+                                </button>
+                            </div>
+                            <span class="subheading">Get digital marketing updates in your mailbox</span>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-5 pt-4 border-top">
+                    <div class="col-md-6 col-lg-8 mb-md-0 mb-4">
+                        <p class="copyright mb-0">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                            All rights reserved. | by
+                            <a href="https://yoeyar.com" target="_blank">YoeYar.com</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-lg-4 text-md-right">
+                        <ul class="ftco-footer-social ps-5">
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
